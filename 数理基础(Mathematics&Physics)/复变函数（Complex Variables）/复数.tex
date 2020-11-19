@@ -1,0 +1,69 @@
+\documentclass[UTF8]{article}
+\usepackage{ctex}
+
+\begin{document}
+    \section{代数性质}
+        \subsection{和与积}
+            任意一个复数$z=(x, y)$可以写为$z = (x, 0) + (0, 1)(y, 0)$。
+
+            实数的加法单位元$0 = (0, 0)$和乘法单位元$1 = (1, 0)$同样适用于
+            复数。
+
+            对于每一个复数$z = (x, y)$，存在一个加法逆元$-z = (-x, -y)$。
+            对于任意的非零复数$z = (x, y)$，存在一个复数$z^{-1}$，使得$zz^{-1} = 1$。
+
+            $z^{-1} = (\frac{x}{x^2 + y^2}, \frac{-y}{x^2 + y^2})$。
+        \subsection{其他代数性质}
+            如果$z_1z_2 = 0$，两个复数中至少有一个是0。
+
+            $z_1^{-1}z_2^{-1} = (z_1z_2)^{-1} = \frac{1}{z_1z_2}$。
+
+            涉及实数的二项式公式对复数仍然成立，即：
+            $$(z_1 + z_2)^n = \sum_{k = 0}^{n}C_n^kz_1^kz_2^{n - k}$$
+    \section{复平面与向量}
+        \subsection{向量和模}
+            $$Rez \leq |Rez| \leq |z|, Imz \leq |Imz| \leq |z|$$
+        \subsection{三角不等式}
+            $$|z_1 + z_2| \leq |z_1| + |z_2|, |z_1 + z_2| \geq ||z_1| - |z_2||$$
+
+            证明：$|z^n| = |z|^n, (n = 1, 2, \dots)$（数学归纳法）。
+        \subsection{共轭}
+            一个复数$z = x + iy$的共轭复数$\bar z = x -iy$，是关于实轴的对称点。
+        \subsection{复平面中的区域}
+            邻域：$|z - z_0| < \epsilon$，去心邻域：$0 < |z - z_0| < \epsilon$。
+            如果存在$z_0$的一个邻域内只包含集合S的点，那么称$z_0$是集合S的一个内点。
+            如果存在$z_0$的一个邻域内不包含集合S的点，则称$z_0$是集合S的一个外点。
+            如果$z_0$既不是内点也不是外点，则$z_0$为集合S的边界点，所有边界点的总和称为S的边界。
+
+            如果一个集合不包含他的边界点，则这个集合是开集。一个集合是开集，当且仅当他的每个点都是他的内点。
+            如果一个集合包含他的边界点，则称该集合是闭集。
+            S集合的闭包是一个闭集。
+
+            如果开集S的任意两个点$z_1$和$z_2$都可以由一条折线连接，并且这条折线由包含在S内的有限条
+            线段首尾顺次相连组成，则称S是连通的。连通的非空开集称为开域。任何一个邻域都是开域。
+
+            如果$z_0$的每一个去心邻域都至少包含S的一个点，那么称$z_0$是集合S的一个聚点或极限点。
+    \section{指数形式}
+        \subsection{指数形式}
+            设$r$和$\theta$是非零复数$z = x + iy$所对应点的极坐标，$z = r(cos\theta + isin\theta)$。
+
+            $\theta$的每一个值都称为$z$的辐角，这些值的集合用$argz$来表示，其主值记作$Argz$，是唯一满足$-\pi \leq \Theta \leq \pi$的值。
+
+            欧拉公式：
+            $$e^{i\theta} = cos\theta + isin\theta$$
+
+            棣莫弗公式：
+            $$(cos\theta + i\sin\theta)^n = cosn\theta + isinn\theta$$
+
+            将复数写成矩阵形式，该公式等价于一个二维旋转矩阵，每次旋转角度$\theta$，一共旋转$n$次。
+        \subsection{乘积与商的辐角}
+            恒等式：$arg(z_1z_2) = arg(z_1) + arg(z_2)$。
+
+            拉格朗日三角恒等式：
+            $$1 + cos\theta + cos2\theta + \dots + cosn\theta = \frac{1}{2} + \frac{sin[(2n + 1)\frac{\theta}{2}]}{2sin(\frac{1}{2}\theta)}$$
+        \subsection{复数的根}
+            两个非零复数相等，当且仅当：$r_1 = r_2$且$\theta_1 = \theta_2 + 2k\pi$。
+
+            一个复数的$n$次根的辐角$\theta = \frac{\theta_0 + 2k\pi}{n}$。
+
+\end{document}
